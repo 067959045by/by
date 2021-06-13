@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/dapp_top_bar"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/toolBarHeight">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@+id/left_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp15" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/dp4"
+            android:layout_toEndOf="@+id/left_icon"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp18" />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp4"
+            android:layout_toEndOf="@+id/left_icon"
+            android:textColor="#ffffffff"
+            android:textSize="@dimen/sp16" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/name"
+            android:layout_alignStart="@+id/name"
+            android:layout_marginTop="@dimen/dp3"
+            android:textColor="#ffffffff"
+            android:textSize="11sp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/close_root"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="@dimen/dp8"
+        android:background="@drawable/select_shape_black_20dp">
+
+        <ImageView
+            android:id="@+id/iv_setting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:paddingHorizontal="@dimen/dp15"
+            android:paddingVertical="@dimen/dp10"
+            android:src="@drawable/radio_btn_circle_white" />
+
+        <View
+            android:layout_width="@dimen/dp1"
+            android:layout_height="@dimen/dp20"
+            android:layout_centerInParent="true"
+            android:background="@color/white_trans" />
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/iv_setting"
+            android:paddingHorizontal="@dimen/dp15"
+            android:paddingVertical="@dimen/dp10"
+            android:src="@drawable/radio_btn_circle_white_close" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/transparent">
+
+            <com.google.android.material.appbar.CollapsingToolbarLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/transparent"
+                app:contentScrim="@color/colorPrimaryDark"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:paddingTop="@dimen/toolBarHeight">
+
+                    <include layout="@layout/personal_home_header"/>
+                </RelativeLayout>
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/toolBarHeight"
+                    app:layout_collapseMode="pin">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/ivReturn"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:paddingRight="@dimen/dp16"
+                            android:src="@mipmap/icon_toolbar_back"
+                            android:scaleType="center"
+                            android:layout_centerVertical="true"/>
+
+                        <TextView
+                            android:id="@+id/tvTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            tools:text="小橘子衣橱"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:visibility="gone"
+                            android:layout_centerInParent="true"/>
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:orientation="horizontal">
+                             <TextView
+                                android:id="@+id/toolbar_focus"
+                                android:layout_width="100dp"
+                                android:layout_height="30dp"
+                                android:visibility="gone"
+                                android:text="关注"
+                                android:textColor="@color/white"
+                                android:textSize="15sp"
+                                android:gravity="center"
+                                android:layout_marginRight="4dp"
+                                android:layout_centerVertical="true"
+                                android:layout_toLeftOf="@id/rlDropdown"
+                                android:background="@drawable/shape_round_red_25dp"/>
+
+                            <ImageView
+                                android:id="@+id/toolbar_dropdown"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:visibility="gone"
+                                android:layout_marginRight="12dp"
+                                android:layout_centerVertical="true"
+                                android:layout_centerInParent="true"
+                                android:background="@mipmap/ic_down_arrow" />
+                        </LinearLayout>
+
+                    </RelativeLayout>
+                </androidx.appcompat.widget.Toolbar>
+
+            </com.google.android.material.appbar.CollapsingToolbarLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/colorPrimaryDark">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_top_round_white">
+                    <com.google.android.material.tabs.TabLayout
+                        android:id="@+id/tabLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        app:tabIndicator="@drawable/indicator"
+                        app:tabMode="scrollable"
+                        app:tabIndicatorColor="@color/colorAccent"
+                        app:tabIndicatorFullWidth="true"
+                        app:tabRippleColor="@android:color/transparent"
+                        app:tabSelectedTextColor="@color/colorPrimaryDark"
+                        app:tabTextAppearance="@style/TabLayoutTextStyle16"
+                        app:tabTextColor="@color/colorCustomGray">
+
+                        <com.google.android.material.tabs.TabItem
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="作品"/>
+                        <com.google.android.material.tabs.TabItem
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="喜欢"/>
+                    </com.google.android.material.tabs.TabLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <com.echofeng.common.ui.widget.MyViewPager
+            android:id="@+id/mViewPager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</RelativeLayout>

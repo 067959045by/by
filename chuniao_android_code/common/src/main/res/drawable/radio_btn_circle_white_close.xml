@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 圆环 -->
+<!--<shape xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    android:innerRadius="@dimen/dp4"-->
+<!--    android:shape="ring"-->
+<!--    android:thickness="@dimen/dp4"-->
+<!--    android:useLevel="false">-->
+<!--    &lt;!&ndash;android:useLevel="false"必须是false&ndash;&gt;-->
+
+<!--    <solid android:color="@color/white" />-->
+
+<!--    <stroke android:color="@color/text_24254B_color"-->
+<!--        android:width="@dimen/dp4"/>-->
+<!--</shape>-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list>
+            <item android:width="@dimen/dp15" android:height="@dimen/dp15">
+                <shape android:dither="true" android:shape="oval">
+                    <solid android:color="@color/trans" />
+
+                    <stroke android:width="@dimen/dp2" android:color="@color/white_tran7f" />
+                </shape>
+
+
+            </item>
+
+            <item
+
+                android:gravity="center">
+                <shape android:dither="true" android:shape="oval">
+                    <solid android:color="@color/white_tran7f" />
+                    <size android:width="@dimen/dp6" android:height="@dimen/dp6" />
+
+                </shape>
+            </item>
+
+
+        </layer-list>
+    </item>
+    <item android:state_pressed="false">
+        <layer-list>
+
+            <item android:width="@dimen/dp15" android:height="@dimen/dp15">
+                <shape android:dither="true" android:shape="oval">
+                    <solid android:color="@color/trans" />
+
+                    <stroke android:width="@dimen/dp2" android:color="@color/white" />
+                </shape>
+
+
+            </item>
+
+            <item
+
+                android:gravity="center">
+                <shape android:dither="true" android:shape="oval">
+                    <solid android:color="@color/white" />
+                    <size android:width="@dimen/dp6" android:height="@dimen/dp6" />
+
+                </shape>
+            </item>
+
+
+        </layer-list>
+    </item>
+</selector>

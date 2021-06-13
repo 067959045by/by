@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?><!-- 圆环 -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true">
+        <layer-list>
+
+
+            <item android:width="@dimen/dp20" android:height="@dimen/dp6">
+                <shape android:dither="true" android:shape="rectangle">
+                </shape>
+            </item>
+            <item android:width="@dimen/dp4" android:height="@dimen/dp4" android:gravity="center_vertical">
+                <shape android:dither="true" android:shape="oval">
+                    <solid android:color="@color/black_tran3f" />
+                    <size android:width="@dimen/dp4" android:height="@dimen/dp4" />
+
+                </shape>
+            </item>
+            <item android:width="@dimen/dp6" android:height="@dimen/dp6" android:gravity="center_horizontal">
+                <shape android:dither="true" android:shape="oval">
+                    <solid android:color="@color/black_tran3f" />
+                    <size android:width="@dimen/dp6" android:height="@dimen/dp6" />
+
+                </shape>
+            </item>
+            <item android:width="@dimen/dp4" android:height="@dimen/dp4" android:gravity="right|center_vertical">
+                <shape android:dither="true" android:shape="oval">
+                    <solid android:color="@color/black_tran3f" />
+                    <size android:width="@dimen/dp4" android:height="@dimen/dp4" />
+
+                </shape>
+            </item>
+
+        </layer-list>
+    </item>
+    <item android:state_pressed="false">
+        <layer-list>
+
+
+            <item android:width="@dimen/dp20" android:height="@dimen/dp6">
+                <shape android:dither="true" android:shape="rectangle">
+
+
+                </shape>
+            </item>
+            <item android:width="@dimen/dp4" android:height="@dimen/dp4" android:gravity="center_vertical">
+                <shape android:dither="true" android:shape="oval">
+                    <solid android:color="@color/black" />
+                    <size android:width="@dimen/dp4" android:height="@dimen/dp4" />
+
+                </shape>
+            </item>
+            <item android:width="@dimen/dp6" android:height="@dimen/dp6" android:gravity="center_horizontal">
+                <shape android:dither="true" android:shape="oval">
+                    <solid android:color="@color/black" />
+                    <size android:width="@dimen/dp6" android:height="@dimen/dp6" />
+
+                </shape>
+            </item>
+            <item android:width="@dimen/dp4" android:height="@dimen/dp4" android:gravity="right|center_vertical">
+                <shape android:dither="true" android:shape="oval">
+                    <solid android:color="@color/black" />
+                    <size android:width="@dimen/dp4" android:height="@dimen/dp4" />
+
+                </shape>
+            </item>
+
+        </layer-list>
+    </item>
+</selector>

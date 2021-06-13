@@ -1,0 +1,4 @@
+include ':app'
+include ':common'
+include ':citypicker'
+rootProject.name = "framework_kotlin"

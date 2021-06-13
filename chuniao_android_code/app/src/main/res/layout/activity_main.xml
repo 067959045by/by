@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_wallet_oc_lin_main"
+    android:layout_width="match_parent"
+
+    android:layout_height="match_parent">
+
+
+    <com.echofeng.common.ui.widget.MyViewPager
+        android:id="@+id/mViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_content" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bottom_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardElevation="0dp"
+        android:orientation="vertical">
+
+
+        <com.chaychan.library.BottomBarLayout
+            android:id="@+id/mBottomBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.chaychan.library.BottomBarItem
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:iconNormal="@drawable/selector_line_border_gray_0dp"
+                app:iconSelected="@drawable/selector_line_border_gray_0dp"
+                app:itemText="首页"
+                app:itemTextSize="16sp"
+                app:textColorNormal="#666C6C"
+                app:textColorSelected="@color/white"/>
+
+            <com.chaychan.library.BottomBarItem
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:iconNormal="@drawable/selector_line_border_gray_0dp"
+                app:iconSelected="@drawable/selector_line_border_gray_0dp"
+                app:itemMarginTop="@dimen/dp4"
+                app:itemText="热门"
+                app:itemTextSize="16sp"
+                app:textColorNormal="#666C6C"
+                app:textColorSelected="@color/white" />
+            <com.chaychan.library.BottomBarItem
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:iconNormal="@mipmap/icon_bar_creater"
+                app:iconSelected="@mipmap/icon_bar_creater"
+                app:itemMarginTop="@dimen/dp4"
+                app:itemText="创作者"
+                app:itemTextSize="10sp"
+                app:textColorNormal="@color/colorAccent"
+                app:textColorSelected="@color/colorAccent" />
+            <com.chaychan.library.BottomBarItem
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:iconNormal="@drawable/selector_line_border_gray_0dp"
+                app:iconSelected="@drawable/selector_line_border_gray_0dp"
+                app:itemMarginTop="@dimen/dp4"
+                app:itemText="消息"
+                app:itemTextSize="16sp"
+                app:textColorNormal="#666C6C"
+                app:textColorSelected="@color/white" />
+            <com.chaychan.library.BottomBarItem
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                app:iconNormal="@drawable/selector_line_border_gray_0dp"
+                app:iconSelected="@drawable/selector_line_border_gray_0dp"
+                app:itemText="我的"
+                app:textColorNormal="#666C6C"
+                app:textColorSelected="@color/white"
+                app:itemTextSize="16sp"
+                />
+        </com.chaychan.library.BottomBarLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

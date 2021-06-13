@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#100c24</color>
+    <color name="colorPrimaryDark">#100c24</color>
+    <color name="colorPrimaryNight">#28243a</color>
+    <color name="colorAccent">#ff2532</color>
+    <color name="transparent">#00000000</color>
+
+    <color name="black">#ff000000</color>
+    <color name="white">#ffffffff</color>
+    <color name="gray">#cccccc</color>
+    <color name="red">#FA3A3A</color>
+    <color name="colorText">#FF131938</color>
+    <color name="gray_password_label">#FF666C6C</color>
+    <color name="line_gray">@color/colorPrimaryDark</color>
+    <color name="trans">#00000000</color>
+    <color name="white_trans">#7fffffff</color>
+    <color name="white_tran7f">#7fffffff</color>
+    <color name="black_tran3f">#3f000000</color>
+</resources>

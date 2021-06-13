@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.lianzhihui.onlyleague">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <application
+        android:name="com.echofeng.common.MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/jz_network_security_config"
+        android:requestLegacyExternalStorage="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="TIKTOK_CHANNEL"
+            android:value="${CHANNEL_VALUE}"/>
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileProvider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+        <activity
+            android:name="com.tencent.bugly.beta.ui.BetaActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize|locale"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity android:name="com.lianzhihui.minitiktok.ui.SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.lianzhihui.minitiktok.ui.MainActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.lianzhihui.minitiktok.ui.TestActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.lianzhihui.minitiktok.ui.main.one.PlayListActivity" />
+        <activity android:name="com.lianzhihui.minitiktok.ui.system.SettingActivity" />
+        <activity android:name="com.lianzhihui.minitiktok.ui.system.AboutActivity" />
+        <activity android:name="com.lianzhihui.minitiktok.ui.main.two.GoldColumnActivity" />
+        <activity android:name="com.lianzhihui.minitiktok.ui.main.four.ManageSettingActivity" />
+        <activity
+            android:name="com.lianzhihui.minitiktok.ui.main.four.EditInfoActivity"
+            android:theme="@style/MyCityPickerTheme" />
+        <activity android:name="com.lianzhihui.minitiktok.ui.main.one.UserCenterActivity" />
+        <activity android:name="com.lianzhihui.minitiktok.ui.main.four.AgentShareActivity" />
+        <activity android:name="com.lianzhihui.minitiktok.ui.system.ReportVideoActivity" />
+        <activity android:name="com.lianzhihui.minitiktok.ui.main.two.ColumnActivity" />
+        <activity android:name="com.lianzhihui.minitiktok.ui.system.ImServiceActivity" />
+        <activity android:name="com.lianzhihui.minitiktok.ui.main.four.TransRecordActivity" />
+        <activity android:name="com.lianzhihui.minitiktok.ui.main.four.CashActivity" />
+        <activity android:name="com.lianzhihui.minitiktok.ui.main.four.WalletActivity" />
+        <activity android:name="com.lianzhihui.minitiktok.ui.account.ui.login.LoginActivity" />
+        <activity android:name="com.lianzhihui.minitiktok.ui.system.BindInvatationActivity"/>
+    </application>
+
+</manifest>

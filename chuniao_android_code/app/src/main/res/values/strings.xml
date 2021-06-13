@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">雏鸟短视频</string>
+    <string name="toast_no_net">无网络</string>
+    <string name="toast_copy_success">已拷贝</string>
+
+    <string name="next_step">下一步</string>
+    <string name="verify">验证</string>
+    <string name="confirm">确定</string>
+    <string name="text_cancel">取消</string>
+    <string name="text_compare">确定</string>
+    <string name="press_again_to_exit">再次返回退出应用</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="prompt_email">请输入手机号</string>
+    <string name="prompt_password">密码</string>
+    <string name="action_sign_in">登录</string>
+    <string name="text_more">更多</string>
+    <string name="text_bind2">获取验证码</string>
+    <string name="action_sign_in_short">填写验证码</string>
+
+
+</resources>

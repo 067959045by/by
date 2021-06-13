@@ -1,0 +1,29 @@
+ext.change = [
+//        版本名定义规则（后缀），请在打对应包的时候检查后缀是否添加并符合当前环境：
+//        -test（测试）
+//        -check（预上线）
+//        -release（上线）
+        code: 1,
+        name: '1.0.0',
+]
+
+ext.versions = [
+        minSdk             : 21,
+        targetSdk          : 29,
+        compileSdk         : 30,
+        buildTools         : '30.0.1',
+        applicationId      : "com.bgm.chuniaoapp",
+        androidGradlePlugin: '3.2.1',
+        supportLibs        : '26.1.0',
+        kotlin_version     : '1.4.31',
+]
+
+ext.gradlePlugins = [
+        android: "com.android.tools.build:gradle:$versions.androidGradlePlugin",
+]
+
+ext.libraries = [
+        supportAppCompat   : "com.android.support:appcompat-v7:$versions.supportLibs",
+        supportRecyclerView: "com.android.support:recyclerview-v7:$versions.supportLibs",
+]
+

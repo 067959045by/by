@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    android:orientation="vertical"
+    tools:context="com.lianzhihui.minitiktok.ui.main.four.TransRecordActivity">
+    <include layout="@layout/title_bar_common"/>
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/trans"
+        android:layout_centerHorizontal="true"
+        app:tabIndicator="@drawable/indicator"
+        app:tabMode="auto"
+        app:tabIndicatorColor="@color/colorGold"
+        app:tabIndicatorFullWidth="true"
+        app:tabRippleColor="@android:color/transparent"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextAppearance="@style/TabLayoutTextStyle16"
+        app:tabTextColor="@color/white">
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="充值"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="收益"/>
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提现"/>
+    </com.google.android.material.tabs.TabLayout>
+    <com.echofeng.common.ui.widget.MyViewPager
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>

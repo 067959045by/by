@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:background="@color/black">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/dp16"
+        android:layout_marginBottom="@dimen/dp16"
+        android:layout_marginRight="120dp">
+        <LinearLayout
+            android:id="@+id/view_conent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvNickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" @大致爱高清"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@color/white"/>
+
+            <com.echofeng.common.ui.widget.view.TagTextView
+                android:id="@+id/autoLinkTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_marginTop="10dp"/>
+
+            <com.echofeng.common.ui.widget.view.MarqueeTextView
+                android:id="@+id/tvContent"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content"
+                android:text=" @大致爱高清 创作的原生 - 大致爱高清"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:layout_marginTop="10dp"/>
+            <Button
+                android:id="@+id/btFullVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="26dp"
+                android:padding="@dimen/dp4"
+                android:layout_marginTop="@dimen/dp8"
+                android:background="@drawable/shape_round_gold_25dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp14"
+                android:text="观看完整版"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/view_ad"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:background="@drawable/selector_stoke_white_10dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dp16"
+                android:orientation="horizontal">
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/ivAdIcon"
+                    android:layout_width="64dp"
+                    android:layout_height="64dp"
+                    app:riv_corner_radius="@dimen/dp8"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_launcher"/>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/dp8"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tvAdTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="下载领百元红包"
+                        android:textColor="#ff0d0a1b"
+                        android:textSize="16sp"
+                        />
+                    <TextView
+                        android:id="@+id/tvAdContent"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="广告文案广告文案广告文案广告文案广告文案广告..."
+                        android:textColor="#ff8b8b8b"
+                        android:textSize="12sp"
+                        />
+                </LinearLayout>
+            </LinearLayout>
+            <Button
+                android:id="@+id/btAdDownLoad"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/selector_stoke_blue_10dp"
+                android:layout_marginHorizontal="@dimen/dp16"
+                android:layout_marginBottom="@dimen/dp8"
+                android:textColor="@color/white"
+                android:text="立即下载"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/view_action"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true">
+
+        <RelativeLayout
+            android:layout_width="52dp"
+            android:layout_height="62dp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivHead"
+                android:layout_width="52dp"
+                android:layout_height="52dp"
+                app:riv_mutate_background="true"
+                app:riv_oval="true"
+                app:riv_border_color="@color/white"
+                app:riv_border_width="2dp"
+                android:scaleType="centerCrop"
+                android:src="@color/white"/>
+
+            <ImageView
+                android:id="@+id/ivFocus"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:padding="3dp"
+                android:src="@mipmap/icon_add_friends"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlLike"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <com.echofeng.common.ui.widget.view.IconFontTextView
+                android:id="@+id/ivLike"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="32sp"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                android:text="@string/icon_like_fill" />
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:id="@+id/animationView"
+                android:layout_width="85dp"
+                android:layout_height="85dp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvLikecount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="0"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="-22dp"/>
+
+        <com.echofeng.common.ui.widget.view.IconFontTextView
+            android:id="@+id/ivComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="15dp"
+            android:text="@string/icon_comment"/>
+
+        <TextView
+            android:id="@+id/tvCommentcount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="0"
+            android:layout_marginTop="2dp"
+            android:textSize="12sp"
+            android:textColor="@color/white"/>
+
+        <com.echofeng.common.ui.widget.view.IconFontTextView
+            android:id="@+id/ivShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32sp"
+            android:textColor="@color/white"
+            android:layout_marginTop="12dp"
+            android:text="@string/icon_more"/>
+
+        <TextView
+            android:id="@+id/tvSharecount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="0"
+            android:textSize="12sp"
+            android:layout_marginTop="-5dp"
+            android:textColor="@color/white"/>
+
+        <RelativeLayout
+            android:id="@+id/rlRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:layout_marginBottom="15dp">
+
+            <ImageView
+                android:id="@+id/ivRecord"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:background="@mipmap/icon_video_box" />
+
+            <com.echofeng.common.ui.widget.view.CircleImageView
+                android:id="@+id/ivHeadAnim"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                app:ease_radius="15dp"
+                app:es_shape_type="round"
+                android:layout_centerInParent="true"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

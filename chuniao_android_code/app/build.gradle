@@ -1,0 +1,109 @@
+plugins {
+    id 'com.android.application'
+    id 'realm-android'
+    id 'kotlin-android'
+    id 'kotlin-android-extensions'
+}
+Properties properties = new Properties()
+def writer = rootProject.file('gradle.properties')
+properties.load(writer.newDataInputStream())
+
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "30.0.1"
+
+    defaultConfig {
+        applicationId versions.applicationId
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+        versionCode change.code
+        versionName change.name
+        multiDexEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        android.applicationVariants.all { variant ->
+            variant.outputs.all {
+                outputFileName = "chuniao-${variant.versionName}-code-${variant.versionCode}.apk"
+            }
+        }
+        manifestPlaceholders = [
+                CHANNEL_VALUE: "official", //渠道名称
+        ]
+        lintOptions {
+            abortOnError false
+        }
+        ndk {
+            //设置支持的SO库架构
+//            abiFilters 'armeabi','armeabi-v7a','arm64-v8a' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+            abiFilters 'armeabi-v7a' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+//在android.signingConfigs{}下定义一个或者多个签名信息
+    signingConfigs {
+        debug {
+            storeFile file(DEBUG_STORE_FILE)
+            storePassword DEBUG_STORE_PASSWORD
+            keyAlias DEBUG_KEY_ALIAS
+            keyPassword DEBUG_KEY_PASSWORD
+            v2SigningEnabled true
+        }
+        release {
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+            v2SigningEnabled true
+        }
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+        debug {
+            signingConfig signingConfigs.debug
+            minifyEnabled false
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$versions.kotlin_version"
+    implementation 'androidx.core:core-ktx:1.2.0'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.2'
+    implementation 'org.jetbrains:annotations:15.0'
+    implementation 'com.android.support:support-annotations:28.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+    implementation files('libs/jpush-android-3.8.0.jar')
+    implementation files('libs/jcore-android-2.4.2.jar')
+    implementation files('libs/captcha-release_v3.1.9.aar')
+    implementation 'androidx.localbroadcastmanager:localbroadcastmanager:1.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.annotation:annotation:1.1.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'party.52it:Bip44ForJava:1.0.0'
+    implementation 'org.web3j:core:3.3.1-android'
+    implementation 'com.androidkun:XTabLayout:1.1.4'
+    implementation project(':citypicker')
+    //noinspection GradleCompatible
+    implementation project(path: ':common')
+}
