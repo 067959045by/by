@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.chaychan:BottomBarLayout:1.2.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7f880f62308ec6ff087f411fe4e4ea50/jetified-BottomBarLayout-1.2.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7f880f62308ec6ff087f411fe4e4ea50/jetified-BottomBarLayout-1.2.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/7f880f62308ec6ff087f411fe4e4ea50/jetified-BottomBarLayout-1.2.0/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.chaychan/BottomBarLayout/1.2.0/284a7dfd9c379ab4911d8448ee33f4233851031/BottomBarLayout-1.2.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
